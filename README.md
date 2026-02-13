@@ -1,3 +1,4 @@
+"For the theoretical framework regarding AI Safety, Jungian Psychology, and Value Alignment, see the Research Summary."
 # Structural Intelligence (SI) 3.2 / 3.4
 ### *The Mechanics of the Soul: A Mathematical Framework for Human-AI Alignment*
 
