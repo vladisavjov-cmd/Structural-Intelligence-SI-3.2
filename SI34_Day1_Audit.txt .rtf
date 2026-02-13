@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 SI 3.4 \'97 DAY 1 AUDIT (NO VIBES)\
+\
+Location/Timezone: Novi Sad, Serbia (CET)\
+T0 anchor: US cash open (15:30 CET)\
+Event context: CPI day (CPI 14:30 CET). Test window anchored to US open.\
+\
+Defaults used:\
+Touches(48h)=unknown\
+Reflex \uc0\u961 =0.50 (default)\
+Exit quality=not recorded\
+\
+UNIVERSE (fixed Set A):\
+GOOG, SPY, QQQ, AAPL, MSFT\
+\
+RAW PRINTS\
+GOOG: P0=308.12 | P5=307.13 | P10=305.56 | P15=306.28 | P30=307.06 | P45=306.86 | P60=307.55\
+SPY:  P0=681.65 | P5=681.50 | P10=679.43 | P15=680.64 | P30=680.73 | P45=682.01 | P60=683.58\
+QQQ:  P0=600.29 | P5=599.75 | P10=598.25 | P15=600.16 | P30=600.01 | P45=601.37 | P60=603.78\
+AAPL: P0=262.01 | P5=259.45 | P10=259.09 | P15=259.66 | P30=259.37 | P45=260.28 | P60=260.79\
+MSFT: P0=403.87 | P5=401.34 | P10=400.94 | P15=403.26 | P30=403.01 | P45=401.87 | P60=404.31\
+\
+SI 3.4 GATES (direction from r5; Gate1=r15; Gate2=r30)\
+GOOG: Dir=Down | Gate15=HELD | Gate30=HELD | Call=HIGH | Selection=GREEN-D | Tier=3\
+QQQ:  Dir=Down | Gate15=HELD | Gate30=HELD | Call=HIGH | Selection=GREEN-D | Tier=3\
+AAPL: Dir=Down | Gate15=HELD | Gate30=HELD | Call=HIGH | Selection=GREEN-D | Tier=3\
+MSFT: Dir=Down | Gate15=HELD | Gate30=HELD | Call=HIGH | Selection=GREEN-D | Tier=3\
+SPY:  Dir=Unclear | Gate15=CHOP | Gate30=CHOP | Call=LOW  | Selection=AMBER | Tier=1\
+\
+OUTCOME CHECK (P60 vs P0)\
+GOOG: below P0 (down thesis intact; digestion/retrace)\
+AAPL: below P0 (down thesis intact)\
+QQQ: above P0 (reversal/reclaim vs down impulse)\
+MSFT: above P0 (reversal/reclaim vs down impulse)\
+SPY: above P0 (late-up resolution; consistent with earlier CHOP/LOW)\
+\
+EXIT RULE (fixed)\
+Exit if: loses hold/reclaim line OR turns into CHOP (2+ crosses of P0 inside the gate window).\
+Falsifier: If the next gate cannot stay HELD, thesis is invalid for this window.\
+}
