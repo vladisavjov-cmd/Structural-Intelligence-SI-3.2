@@ -692,3 +692,50 @@ if __name__ == "__main__":
     main()
 
 
+
+import math
+
+def calculate_viability_forecast(endurance, containment, repair_path):
+    """
+    Calculates Belief as a viability forecast. 
+    Source: Collapse as the Gateway to Reality (Jovanović, 2026)
+    """
+    # Belief estimate: can the system survive reality-contact? [cite: 307]
+    belief_score = (endurance + containment + repair_path) / 3
+    return belief_score
+
+def calculate_presence(E, w, SQo, SQi, Rv, K, SI, IQ, EQ, C, L, A, N, H, alpha, beta, i_exp, W, M):
+    """
+    The SI-3.2 Presence Equation. [cite: 29, 30]
+    """
+    # Orientation: Pilot (w) vs Ego Inflation (SQi) [cite: 73, 75]
+    pilot_orientation = w * (SQo / (1 + SQi)) 
+    
+    # Corrigibility: Revision (Rv) and Coherence (K) synced with Contact (C) [cite: 82, 85, 93]
+    corrigibility = (Rv * K) * (SI * (IQ + EQ) * C) 
+    
+    # Drag: Latency (L), Performance (A), Noise (N), and Scars (H) [cite: 98, 99, 100, 101]
+    drag = (alpha * L) + (beta * A) + N + H 
+    
+    if drag == 0: drag = 0.001
+        
+    # Load (i) amplifies the truth of the structure [cite: 50, 112]
+    presence_core = E * pilot_orientation * math.pow((corrigibility / drag), i_exp) 
+    
+    # Final P_real including Fixed Worth (W) and Maintenance (M) [cite: 30, 117, 119]
+    return presence_core + W - M 
+
+# --- EXECUTION PROTOCOL ---
+
+# Step 0: Check Viability [cite: 399]
+viability = calculate_viability_forecast(endurance=0.2, containment=0.1, repair_path=0.3)
+
+if viability < 0.5:
+    # If the forecast is negative, the system rebounds into the Dream Path [cite: 308, 353]
+    print("ALERT: Viability Gate Failed. User is uncontained.") [cite: 399]
+    print("ACTION: Restore minimal containment (Sleep, Food, Witness).") [cite: 395]
+else:
+    # Calculate Sovereignty (P_real) [cite: 28]
+    p_result = calculate_presence(...) 
+    print(f"Sovereign Coefficient: {p_result}")
+
